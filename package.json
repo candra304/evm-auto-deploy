@@ -1,0 +1,28 @@
+{
+  "name": "satset-auto-deploy",
+  "version": "1.0.0",
+  "description": "Multi-account auto deploy smart contract to EVM chains with custom banner.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "evm",
+    "deploy",
+    "smart-contract",
+    "ethers",
+    "multi-wallet",
+    "automation",
+    "satset"
+  ],
+  "author": "Chandra",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "colors": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.13.4",
+    "readline-sync": "^1.4.10",
+    "solc": "^0.8.28"
+  }
+}
