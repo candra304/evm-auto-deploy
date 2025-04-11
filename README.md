@@ -1,0 +1,98 @@
+# evm-auto-deploy
+
+> **SAT SET - [by Chandra]**
+
+Script ini dibuat untuk melakukan **auto-deploy smart contract ERC20** ke jaringan EVM secara massal menggunakan banyak wallet (private key). Cocok untuk project airdrop, token testing, ataupun deployment eksperimen.
+
+---
+
+## Fitur
+- Auto deploy ERC20 dari multi akun (private key)
+- Support banyak jaringan (custom RPC)
+- Bisa set jumlah deploy per wallet
+- Modular dan mudah dikembangkan
+- Banner dan log hasil deploy yang rapi dan informatif
+
+---
+
+## Cara Pakai
+
+### 1. Clone Repo
+```bash
+git clone https://github.com/candra304/evm-auto-deploy.git
+cd evm-auto-deploy
+```
+
+### 2. Install Dependency
+```bash
+npm install
+```
+
+### 3. Buat File yang Dibutuhkan
+
+**.env**
+```env
+# Bisa kosong karena semua data dari keys.txt
+```
+
+**keys.txt**
+```txt
+PRIVATE_KEY_1
+PRIVATE_KEY_2
+...dst
+```
+
+### 4. Struktur Folder
+```
+EVMautodeploy/
+├── keys.txt
+├── .env
+├── index.js
+├── package.json
+├── src/
+│   ├── utils.js
+│   ├── contractCode.js
+│   └── network.js
+```
+
+---
+
+## Menjalankan Script
+```bash
+node index.js
+```
+Script akan menanyakan:
+- Jaringan yang dipilih
+- Nama Token, Simbol, dan Supply
+- Berapa kali deploy per wallet
+
+---
+
+## Custom Jaringan (RPC)
+Edit file `src/network.js` untuk menambahkan RPC baru seperti:
+```js
+{
+  name: 'Seismic Testnet',
+  rpcUrl: 'https://node-2.seismicdev.net/rpc',
+  explorer: 'https://seismic-explorer.testnet/'
+}
+```
+
+---
+
+## Catatan Keamanan
+- Jangan push `keys.txt` atau `.env` ke GitHub publik
+- Gunakan file `.gitignore` seperti:
+```
+.env
+keys.txt
+```
+
+---
+
+## Credit
+Dibuat oleh: **Chandra (candra304)**
+
+Script ini bebas dikembangkan ulang, silakan fork atau kontribusi!
+
+
