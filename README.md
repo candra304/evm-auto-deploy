@@ -50,12 +50,7 @@ EVMautodeploy/
 │   └── network.js
 ```
 
----
 
-## Menjalankan Script
-```bash
-node index.js
-```
 Script akan menanyakan:
 - Jaringan yang dipilih
 - Nama Token, Simbol, dan Supply
@@ -64,25 +59,18 @@ Script akan menanyakan:
 ---
 
 ## Custom Jaringan (RPC)
-Edit file `src/network.js` untuk menambahkan RPC baru seperti:
-```js
+Edit file 
+```
+nano src/network.js
+```
+isi sesui format
+```
 {
   name: 'Seismic Testnet',
   rpcUrl: 'https://node-2.seismicdev.net/rpc',
   explorer: 'https://seismic-explorer.testnet/'
 }
 ```
-
----
-
-## Catatan Keamanan
-- Jangan push `keys.txt` atau `.env` ke GitHub publik
-- Gunakan file `.gitignore` seperti:
-```
-.env
-keys.txt
-```
-
 ---
 
 ## Credit
@@ -90,4 +78,13 @@ Dibuat oleh: **Chandra (candra304)**
 
 Script ini bebas dikembangkan ulang, silakan fork atau kontribusi!
 
+## Menjalankan Script
+```bash
+node index.js
+```
+
+## file txt 
+```
+nano keys.txt
+```
 
