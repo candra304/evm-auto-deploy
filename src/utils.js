@@ -4,9 +4,13 @@ function loadNetworkConfig(type) {
       {
         name: 'Seismic Devnet',
         rpcUrl: 'https://node-2.seismicdev.net/rpc',
-        explorer: 'https://explorer-2.seismicdev.net' // ganti sesuai explorer kamu
+        explorer: 'https://explorer-2.seismicdev.net'
       },
-      // Tambahkan jaringan lain kalau perlu
+      {
+        name: '0G-Galileo-Testnet',
+        rpcUrl: 'https://evmrpc-testnet.0g.ai/',
+        explorer: 'https://chainscan-galileo.0g.ai/'
+      }
     ];
   } else if (type === 'mainnet') {
     return [
@@ -38,4 +42,3 @@ module.exports = {
   getUserInput,
   delay,
 };
-
