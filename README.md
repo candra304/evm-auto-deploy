@@ -30,11 +30,6 @@ npm install
 
 ### 3. Buat File yang Dibutuhkan
 
-**.env**
-```env
-# Bisa kosong karena semua data dari keys.txt
-```
-
 **keys.txt**
 ```txt
 PRIVATE_KEY_1
